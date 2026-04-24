@@ -2,7 +2,7 @@
 Interactive map and navigation engine 
 
 ```
-mapvista/
+Atlas/
 ├── public/
 │   └── index.html               ← HTML entry point
 ├── package.json                 ← dependencies (React, Leaflet)
