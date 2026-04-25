@@ -336,7 +336,6 @@ function renderResults(results, header) {
   `;
 }
 
-// ── SELECT PLACE ──
 function selectPlace(place) {
   state.selectedPlace = place;
 
@@ -390,7 +389,6 @@ function showDetailPanel(place) {
   `;
 }
 
-// ── MARKERS ──
 function placeMarkers(results) {
   const colors = { restaurant:'#ef4444', cafe:'#f59e0b', hospital:'#3b82f6', hotel:'#8b5cf6', atm:'#10b981', supermarket:'#f97316', default:'#2563eb' };
 
@@ -435,7 +433,6 @@ function clearMarkers() {
   state.selectedPlace = null;
 }
 
-// ── DIRECTIONS ──
 function startDirectionsTo(name) {
   setMode('directions');
   document.getElementById('dirDest').value = name;
@@ -560,7 +557,6 @@ function humanizeManeuver(step) {
   return step.name ? `Head towards ${step.name}` : 'Continue straight';
 }
 
-// ── MODE SWITCHING ──
 function setMode(mode) {
   ['explore','directions'].forEach(m => {
     document.getElementById(`tab${capitalize(m)}`).classList.toggle('active', m === mode);
@@ -568,7 +564,6 @@ function setMode(mode) {
   });
 }
 
-// ── HELPERS ──
 function setLoadingState(msg) {
   document.getElementById('resultsList').innerHTML = `
     <div class="loading">
@@ -622,15 +617,12 @@ function sharePlace(name, lat, lng) {
   }
 }
 
-// ── MARKER ANIMATION ──
 const style = document.createElement('style');
 style.textContent = '@keyframes markerIn { from { transform: translateY(-20px) scale(0.5); opacity: 0 } to { transform: none; opacity: 1 } }';
 document.head.appendChild(style);
 
-// ── INIT ──
 initMap();
 
-// Start with a default search on the map center (India)
 setTimeout(() => {
   getMyLocation();
 }, 300);
