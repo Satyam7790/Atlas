@@ -1,0 +1,90 @@
+/* =====================================================
+   global.css  — CSS Variables, Resets, Leaflet Tweaks
+   All component styles live in their own .css files
+   ===================================================== */
+
+:root {
+  --bg:           #1c1c1e;
+  --surface:      #2c2c2e;
+  --surface2:     #3a3a3c;
+  --surface3:     #48484a;
+  --border:       rgba(255,255,255,0.08);
+  --border2:      rgba(255,255,255,0.14);
+  --text:         #f5f5f7;
+  --text2:        #aeaeb2;
+  --text3:        #636366;
+  --accent:       #0a84ff;
+  --accent-bg:    rgba(10,132,255,0.15);
+  --accent-dark:  #0070d8;
+  --green:        #30d158;
+  --green-bg:     rgba(48,209,88,0.15);
+  --red:          #ff453a;
+  --red-bg:       rgba(255,69,58,0.15);
+  --amber:        #ffd60a;
+  --orange:       #ff9f0a;
+  --purple:       #bf5af2;
+  --font:         'Inter', -apple-system, sans-serif;
+  --radius:       13px;
+  --radius-sm:    9px;
+  --radius-xs:    6px;
+  --shadow:       0 4px 20px rgba(0,0,0,0.5);
+  --shadow-sm:    0 2px 8px rgba(0,0,0,0.4);
+  --topbar-h:     52px;
+  --sidebar-w:    340px;
+  --ease:         cubic-bezier(0.4,0,0.2,1);
+  --ease-bounce:  cubic-bezier(0.34,1.56,0.64,1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, #root { height: 100%; overflow: hidden; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar        { width: 3px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { background: var(--surface3); border-radius: 2px; }
+*                          { scrollbar-width: thin; scrollbar-color: var(--surface3) transparent; }
+
+/* Leaflet dark overrides */
+.leaflet-popup-content-wrapper {
+  background: var(--surface) !important;
+  border: 1px solid var(--border2) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow) !important;
+  font-family: var(--font) !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+.leaflet-popup-content { margin: 0 !important; min-width: 180px; }
+.leaflet-popup-tip-container { display: none !important; }
+
+.leaflet-control-zoom {
+  border: 1px solid var(--border2) !important;
+  border-radius: var(--radius-sm) !important;
+  box-shadow: var(--shadow) !important;
+  overflow: hidden;
+}
+.leaflet-control-zoom a {
+  font-family: var(--font) !important;
+  width: 34px !important; height: 34px !important; line-height: 34px !important;
+  color: var(--text) !important;
+  background: var(--surface2) !important;
+  border-bottom: 1px solid var(--border) !important;
+  font-size: 17px !important;
+}
+.leaflet-control-zoom a:hover { background: var(--surface3) !important; }
+
+@keyframes markerDrop {
+  from { transform: translateY(-14px) scale(0.6); opacity: 0; }
+  to   { transform: none; opacity: 1; }
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes slideUp {
+  from { transform: translateY(10px); opacity: 0; }
+  to   { transform: none; opacity: 1; }
+}
