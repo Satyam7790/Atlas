@@ -1,3 +1,6 @@
+# Atlas 
+
+```
 Atlas/
 ├── public/
 │   └── index.html               ← HTML entry point
@@ -48,3 +51,4 @@ Atlas/
     └── utils/
         ├── api.js               ← all fetch() calls (Nominatim, Overpass, OSRM)
         └── formatters.js        ← formatDist, formatDuration helpers
+```
