@@ -1,0 +1,12 @@
+.stars        { display: inline-flex; align-items: center; gap: 3px; }
+.stars__icons { color: #ffd60a; letter-spacing: 0.3px; }
+.stars__val   { font-weight: 500; color: var(--text); }
+.stars__ct    { color: var(--text3); }
+
+.stars--sm .stars__icons,
+.stars--sm .stars__val,
+.stars--sm .stars__ct { font-size: 11px; }
+
+.stars--md .stars__icons,
+.stars--md .stars__val,
+.stars--md .stars__ct { font-size: 13px; }
