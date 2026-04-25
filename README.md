@@ -6,7 +6,7 @@ A Google Maps-style web application built with React and Leaflet. Search for pla
 
 ## 🌐 Live Demo
 
-> **Deployed link:** _coming soon_ <!-- Replace this with your deployed URL e.g. https://mapvista.vercel.app -->
+> **Deployed link:** _coming soon_ atlaswapproject.netlify.app/
 
 ---
 
