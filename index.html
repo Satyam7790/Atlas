@@ -117,7 +117,6 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-// ── STATE ──
 const state = {
   map: null,
   tileLayer: null,
@@ -130,7 +129,6 @@ const state = {
   lastSearchCenter: null,
 };
 
-// ── MAP INIT ──
 function initMap() {
   state.map = L.map('map', {
     center: [20.5937, 78.9629],
@@ -154,7 +152,6 @@ function initMap() {
   });
 }
 
-// ── TILE LAYERS ──
 const layers = {
   street: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
   satellite: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
@@ -182,14 +179,12 @@ function toggleLayerMenu() {
   m.style.display = m.style.display === 'none' ? 'block' : 'none';
 }
 
-// Close layer menu on outside click
 document.addEventListener('click', e => {
   if (!e.target.closest('#layerMenu') && !e.target.closest('#layerBtn')) {
     document.getElementById('layerMenu').style.display = 'none';
   }
 });
 
-// ── GEOLOCATION ──
 function getMyLocation() {
   showToast('Getting your location…');
   navigator.geolocation.getCurrentPosition(pos => {
@@ -213,7 +208,6 @@ function getMyLocation() {
   });
 }
 
-// ── SEARCH ──
 document.getElementById('mainSearch').addEventListener('keydown', e => {
   if (e.key === 'Enter') doSearch();
 });
@@ -257,7 +251,6 @@ async function doSearch() {
   }
 }
 
-// ── CATEGORY SEARCH ──
 function filterCategory(el, cat) {
   document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
   el.classList.add('active');
@@ -318,7 +311,6 @@ async function searchNearby(category) {
   }
 }
 
-// ── RENDER RESULTS ──
 function renderResults(results, header) {
   const container = document.getElementById('resultsList');
   const icons = { restaurant:'🍽️', cafe:'☕', hospital:'🏥', hotel:'🏨', atm:'🏧', supermarket:'🛒', default:'📍' };
