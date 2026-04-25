@@ -10,7 +10,6 @@
 </head>
 <body>
 
-<!-- TOP BAR -->
 <header class="topbar">
   <a href="#" class="logo">
     <div class="logo-icon">
@@ -36,13 +35,10 @@
   </div>
 </header>
 
-<!-- MAIN -->
 <div class="main">
 
-  <!-- SIDEBAR -->
   <aside class="sidebar">
 
-    <!-- Mode tabs -->
     <div class="mode-row">
       <button class="mode-btn active" id="tabExplore" onclick="setMode('explore')">
         <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
@@ -54,10 +50,8 @@
       </button>
     </div>
 
-    <!-- EXPLORE VIEW -->
     <div class="view active" id="viewExplore">
 
-      <!-- Filter chips -->
       <div class="filter-row">
         <div class="chip active" data-cat="restaurant" onclick="filterCategory(this,'restaurant')"><span class="chip-icon">🍽️</span> Restaurants</div>
         <div class="chip" data-cat="cafe" onclick="filterCategory(this,'cafe')"><span class="chip-icon">☕</span> Cafes</div>
@@ -67,7 +61,6 @@
         <div class="chip" data-cat="supermarket" onclick="filterCategory(this,'supermarket')"><span class="chip-icon">🛒</span> Markets</div>
       </div>
 
-      <!-- Results -->
       <div id="resultsList" class="results-list">
         <div class="empty-state">
           <div class="empty-icon">🗺️</div>
