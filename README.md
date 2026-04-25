@@ -1,55 +1,16 @@
-# Atlas
-Interactive map and navigation engine 
+# React + Vite
 
-```
-Atlas/
-├── public/
-│   └── index.html               ← HTML entry point
-├── package.json                 ← dependencies (React, Leaflet)
-└── src/
-    ├── index.js                 ← mounts React into index.html
-    ├── App.js                   ← root component, holds shared state
-    ├── App.module.css
-    │
-    ├── styles/
-    │   └── global.css           ← CSS variables used by ALL components
-    │
-    ├── components/
-    │   ├── common/              ← REUSABLE across the whole app
-    │   │   ├── SearchBar.js     ← used in TopBar + DirectionsPanel
-    │   │   ├── SearchBar.module.css
-    │   │   ├── Button.js        ← used in DetailPanel, DirectionsPanel
-    │   │   ├── Button.module.css
-    │   │   ├── Badge.js         ← Open/Closed labels everywhere
-    │   │   ├── Badge.module.css
-    │   │   ├── StarRating.js    ← used in ResultCard + DetailPanel
-    │   │   ├── StarRating.module.css
-    │   │   ├── Toast.js         ← notification pop-up
-    │   │   ├── Toast.module.css
-    │   │   ├── TopBar.js        ← app header
-    │   │   └── TopBar.module.css
-    │   │
-    │   ├── sidebar/
-    │   │   ├── FilterChips.js   ← category pills row
-    │   │   ├── ResultCard.js    ← single place card
-    │   │   ├── ResultsList.js   ← list of ResultCards
-    │   │   ├── DetailPanel.js   ← expanded place info
-    │   │   ├── Sidebar.js       ← combines all sidebar views
-    │   │   └── *.module.css
-    │   │
-    │   ├── directions/
-    │   │   ├── DirectionsPanel.js  ← origin/dest + route steps
-    │   │   └── DirectionsPanel.module.css
-    │   │
-    │   └── map/
-    │       ├── MapView.js       ← all Leaflet logic lives here
-    │       └── MapView.module.css
-    │
-    ├── hooks/
-    │   ├── useToast.js          ← toast state management
-    │   └── useGeolocation.js    ← GPS location hook
-    │
-    └── utils/
-        ├── api.js               ← all fetch() calls (Nominatim, Overpass, OSRM)
-        └── formatters.js        ← formatDist, formatDuration helpers
-```
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
